@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" color="light">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
     <ion-title>
-      Tab 1
+      Accueil
     </ion-title>
   </ion-toolbar>
+    <ion-toolbar color="primary">
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <img src="../assets/photos/finance.jpg"/>
+  <h1>Crypto Analyse</h1>
+  <h2>La platforme n1 en crypto monnaies</h2>
+  <p>Une cryptomonnaie, dite aussi cryptoactif, cryptodevise, monnaie cryptographique ou encore cybermonnaie, est une monnaie émise de pair à pair, sans nécessité de banque centrale, utilisable au moyen d'un réseau informatique décentralisé. Elle utilise les principes de la cryptographie et associe l'utilisateur aux processus d'émission et de règlement des transactions</p>
+  
+  <ion-list>
+    <app-list-item *ngFor= "let img of photoList" [img]= "img">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    </app-list-item>
+  </ion-list>
+
+  <ion-button (click)="show()" expand="block" shape="round">Subscribe</ion-button>
+  
 </ion-content>

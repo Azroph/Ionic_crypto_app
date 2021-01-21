@@ -1,0 +1,10 @@
+<ion-item *ngFor="let img of photoList" [routerLink]="'/details/' + img.id">
+  <ion-avatar slot="start">
+    <ion-img [src]="img.url"></ion-img>
+  </ion-avatar>
+    <ion-label>
+      <h1>{{img.title}}</h1>
+      <h2>{{img.author}}</h2>
+      <p>{{img.description}}</p>
+    </ion-label>
+</ion-item>
